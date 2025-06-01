@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tklds"
+version = "0.0.7"
+
+dependencies = [
+    "numpy>=1.23.5",
+    "pandas>=1.5.3",
+    "scipy>=1.8.1",
+    "sympy>=1.12",
+    "tqdm>=4.65.0"
+]
+
+authors = [
+    { name="Ilya Manyakin", email="ilya@tenokonda.com" },
+    { name="Andres Oliva Denis", email="andres@tenokonda.com" },
+    { name="Gregory Kell", email="gregory@tenokonda.com" },
+    { name="Adrien Papaioannou", email="adrien@tenokonda.com" },
+]
+
+description = "Tenokonda Low Discrepancy Sequences"
+
+readme = "README.rst"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/tenokonda/tklds"
+Issues = "https://github.com/tenokonda/tklds/issues"
