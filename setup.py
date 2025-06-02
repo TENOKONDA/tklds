@@ -37,7 +37,7 @@
 from setuptools import setup, find_packages
 
 setup(name='tklds',
-      version='0.0.7',
+      version='0.0.8',
       description='Tenokonda Low Discrepancy Sequences',
       author='tenokonda',
       packages=find_packages(),
