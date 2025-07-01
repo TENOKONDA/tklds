@@ -69,7 +69,7 @@ Folder :code:`tklds/direction_numbers contains` the direction numbers used to in
 
 
 tkrgsobol_a_ap5_50000
---------------------
+----------------------
 
 This set of direction numbers has 50,000 dimensions, satisfying:
     * property A for all dimensions
