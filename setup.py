@@ -41,5 +41,8 @@ setup(name='tklds',
       description='Tenokonda Low Discrepancy Sequences',
       author='tenokonda',
       packages=find_packages(),
-      include_package_data=True
+      include_package_data=True,
+      long_description="'tkrg-a-ap5' direction numbers for generating Sobol sequences satisfying properties A and A' "
+                       "as well as a comprehensive set of benchmark test functions from literature that can be used for "
+                       "evaluating low discrepancy sequence quality"
       )
