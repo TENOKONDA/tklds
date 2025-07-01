@@ -11,7 +11,9 @@ This set of direction numbers has 50,000 dimensions, satisfying:
     * property A for all dimensions
     * property A' for 5 adjacent dimensions
 
-For further details on their generation and the properties A and A' see (insert Arxiv link here).
+For further details on their generation and the properties A and A' see:
+
+`On the generation of direction numbers for Sobol Sequences and the application to Quasi Monte Carlo Methods <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5283131>`_.
 
 new-joe-kuo-6.21201
 --------------------
@@ -37,4 +39,6 @@ Both files follow the same format, the columns of the file:
 * a - the **primitive polynomial coefficients** represented in terms of an integer value
 * m_i - the **direction numbers** of the dimension
 
-For a description of the terms and underlying theory of low discrepancy sequences consult the publication (insert Arxiv link here).
+For a description of the terms and underlying theory of low discrepancy sequences consult the publication:.
+
+`On the generation of direction numbers for Sobol Sequences and the application to Quasi Monte Carlo Methods <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5283131>`_.
