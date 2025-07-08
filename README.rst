@@ -53,13 +53,13 @@ Examples
 
 Some examples can be found in the `<notebooks>`_ folder:
 
-* **Integral benchmark test functions**: `<https://github.com/TENOKONDA/tklds/blob/main/notebooks/02_integral.ipynb>`_
+* **Integral benchmark test functions**: `notebooks/02_integral.ipynb <https://github.com/TENOKONDA/tklds/blob/main/notebooks/02_integral.ipynb>`_
 
-* **Spurious variance**: `<https://github.com/TENOKONDA/tklds/blob/main/notebooks/05_spurious_variance.ipynb>`_
+* **Spurious variance**: `notebooks/05_spurious_variance.ipynb <https://github.com/TENOKONDA/tklds/blob/main/notebooks/05_spurious_variance.ipynb>`_
 
-* **Brownian motion**: `<https://github.com/TENOKONDA/tklds/blob/main/notebooks/06_brownian_motion.ipynb>`_
+* **Brownian motion**: `notebooks/06_brownian_motion.ipynb <https://github.com/TENOKONDA/tklds/blob/main/notebooks/06_brownian_motion.ipynb>`_
 
-* **Sobol random generator**: `<https://github.com/TENOKONDA/tklds/blob/main/notebooks/07_sobol_engine_examples.ipynb>`_
+* **Sobol random generator**: `notebooks/07_sobol_engine_examples.ipynb <https://github.com/TENOKONDA/tklds/blob/main/notebooks/07_sobol_engine_examples.ipynb>`_
 
 
 Direction Numbers
@@ -97,8 +97,7 @@ File format
 
 Both files follow the same format, the columns of the file:
 
-* **d** - the **index** of the dimension
-    - note that the smallest value is 2, as the first dimension is implicit.
+* **d** - the **index** of the dimension. Note that the smallest value is 2, as the first dimension is implicit.
 * **s** - the **degree** of the primitive polynomial
 * **a** - the **primitive polynomial coefficients** represented in terms of an integer value
 * **m_i** - the **direction numbers** of the dimension
