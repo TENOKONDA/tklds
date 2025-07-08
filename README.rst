@@ -29,7 +29,7 @@ Installing
 
 Install the project from pypi using :code:`pip install tklds`
 
-or by cloning this repository and them:
+or by cloning this repository and pip installing them:
 
 Install the requirements using :code:`python -m pip install -r requirements.txt`
 
@@ -53,27 +53,27 @@ Examples
 
 Some examples can be found in the `<notebooks>`_ folder:
 
-* **Integral benchmark test functions**: `<notebooks/02_integral.ipynb>`_
+* **Integral benchmark test functions**: `<https://github.com/TENOKONDA/tklds/blob/main/notebooks/02_integral.ipynb>`_
 
-* **Spurious variance**: `<notebooks/05_spurious_variance.ipynb>`_
+* **Spurious variance**: `<https://github.com/TENOKONDA/tklds/blob/main/notebooks/05_spurious_variance.ipynb>`_
 
-* **Brownian motion**: `<notebooks/06_brownian_motion.ipynb>`_
+* **Brownian motion**: `<https://github.com/TENOKONDA/tklds/blob/main/notebooks/06_brownian_motion.ipynb>`_
 
-* **Sobol random generator**: `<notebooks/07_sobol_engine_examples.ipynb>`_
+* **Sobol random generator**: `<https://github.com/TENOKONDA/tklds/blob/main/notebooks/07_sobol_engine_examples.ipynb>`_
 
 
 Direction Numbers
 ==================
 
-Folder :code:`tklds/direction_numbers contains` the direction numbers used to initialize the Sobol sequences
+Folder :code:`tklds/direction_numbers` contains the direction numbers used to initialize the Sobol sequences
 
 
 tkrgsobol_a_ap5_50000
 ----------------------
 
 This set of direction numbers has 50,000 dimensions, satisfying:
-    * property A for all dimensions
-    * property A' for 5 adjacent dimensions
+    * Property A for all dimensions
+    * Property A' for 5 adjacent dimensions
 
 For further details on their generation and the properties A and A' see:
 
@@ -97,14 +97,24 @@ File format
 
 Both files follow the same format, the columns of the file:
 
-* d - the index of the dimension
+* **d** - the **index** of the dimension
     - note that the smallest value is 2, as the first dimension is implicit.
-* s - the **degree** of the primitive polynomial
-* a - the **primitive polynomial coefficients** represented in terms of an integer value
-* m_i - the **direction numbers** of the dimension
+* **s** - the **degree** of the primitive polynomial
+* **a** - the **primitive polynomial coefficients** represented in terms of an integer value
+* **m_i** - the **direction numbers** of the dimension
 
 For a description of the terms and underlying theory of low discrepancy sequences consult the publication:.
 
 `On the generation of direction numbers for Sobol Sequences and the application to Quasi Monte Carlo Methods <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5283131>`_.
 
 
+Citation
+========
+
+If you use this codebase, please cite our work using the following reference:
+
+.. code-block:: RST
+
+    Oliva Denis, Andres and Kell, Gregory and Manyakin, Ilya and Papaioannou, Adrien,
+    On the Generation of Direction Numbers for Sobol Sequences and their Application to Quasi Monte Carlo Methods
+    (June 02, 2025). Available at SSRN: https://ssrn.com/abstract=5283131 or http://dx.doi.org/10.2139/ssrn.5283131
