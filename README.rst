@@ -29,11 +29,13 @@ Installing
 
 Install the project from pypi using :code:`pip install tklds`
 
-or by cloning this repository and pip installing them:
+Or by cloning this repository and pip installing them:
 
-Install the requirements using :code:`python -m pip install -r requirements.txt`
+`<https://github.com/TENOKONDA/tklds>`_
 
-Install the project by calling :code:`python -m pip install tklds` from the current folder.
+- Clone tklds from github :code:`git clone https://github.com/TENOKONDA/tklds.git`
+- Install the requirements using :code:`python -m pip install -r requirements.txt` from the repository folder
+- Install the project by calling :code:`python -m pip install tklds` from the repository folder.
 
 Quickstart
 ===========
