@@ -30,7 +30,8 @@
 import numpy as np
 
 from tklds.processes.brownian_motion import _multivariate_brownian_motion
-from tklds.processes.spurious_variance import _compute_sequence_average_correlations
+from tklds.processes.spurious_variance import (_compute_sequence_average_correlations,
+                                               _compute_sequence_average_correlation_prefix)
 from tklds.utilities import _assert_array_is_2d
 
 
@@ -54,6 +55,27 @@ def spurious_variance(a_u: np.ndarray, verbose: bool = False) -> np.ndarray:
     if not isinstance(a_u, np.ndarray):
         raise TypeError(f"Invalid type 'u'. Expected numpy.ndarray, actual: {type(a_u).__name__}")
     a_spv = _compute_sequence_average_correlations(a_u, max_dim=None, n_computation_splits=20, verbose=verbose)
+    return a_spv
+
+def spurious_variance_prefix(a_u: np.ndarray) -> np.ndarray:
+    """
+    Compute the spurious variance from the uniformly distributed inputs using
+    a prefix sum methodology.
+
+    Parameters
+    ----------
+    a_u : numpy.ndarray
+        the uniform variates for which to compute the spurious variance parameter
+
+    Returns
+    -------
+    a_spv : numpy.ndarray
+        spurious variance value array
+
+    """
+    if not isinstance(a_u, np.ndarray):
+        raise TypeError(f"Invalid type 'u'. Expected numpy.ndarray, actual: {type(a_u).__name__}")
+    a_spv = _compute_sequence_average_correlation_prefix(a_u, max_dim=None)
     return a_spv
 
 
