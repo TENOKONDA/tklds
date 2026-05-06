@@ -112,3 +112,37 @@ def _compute_sequence_average_correlations(a_u: np.ndarray, max_dim: int = None,
         a_spurious_variance[dim] = a_spurious_variance[dim] / dim
 
     return a_spurious_variance[1:]
+
+def _compute_sequence_average_correlation_prefix(a_u: np.ndarray, max_dim: int = None) -> np.ndarray:
+    """
+    Computation of all the average correlations up to max_dim for d-dimensional normal random sequences. Each component
+    is assumed to be Normal(mu=0, sigma=1), here we use a prefix approach.
+
+    Parameters
+    ----------
+    a_u : numpy.ndarray
+        array of uniform numbers
+    max_dim : int
+        maximum dimension for which to compute the average correlation for
+
+    Returns
+    -------
+    numpy.ndarray
+        spurious variance value array
+
+    References
+    -----------
+    [1] Construction and comparison of high-dimensional Sobol’ sequence generators.
+        Kucherenko, Sergei & Asotsky, Danil & Atanassov, E. & Roy, Pamphile. (2021).
+
+    """
+    if max_dim is None:
+        max_dim = a_u.shape[1]
+    a_n = scipy.stats.norm.ppf(a_u)
+    row_prefix_sum = np.cumsum(a_n, axis=1)
+    second_moment_sum = np.mean(row_prefix_sum * row_prefix_sum, axis=0)
+    diagonal_sum = np.mean(a_n * a_n, axis=0).cumsum()
+    dim_list = np.arange(1, max_dim + 1, dtype=np.float64)
+    off_diagonal_sum = second_moment_sum - diagonal_sum
+    a_spurious_variance = off_diagonal_sum / dim_list
+    return a_spurious_variance[1:]
