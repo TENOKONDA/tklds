@@ -130,7 +130,7 @@ def sobol_1_comparison(a_u: np.ndarray, aj_lst: List[float] | List[int]) -> Tupl
             f" to equal number of dimensions {a_u.shape[1]}."
         )
         raise ValueError(msg)
-    invalid_aj_lst = [aj for aj in aj_lst if aj < 0]
+    invalid_aj_lst = [aj.item() if isinstance(aj, np.generic) else aj for aj in aj_lst if aj < 0]
     if len(invalid_aj_lst) > 0:
         msg = f"input contains invalid aj values: {invalid_aj_lst}"
         raise ValueError(msg)
@@ -365,7 +365,7 @@ def genzs_example_comparison(a_u: np.ndarray, aj_lst: List[float] | List[int],
             f" to equal number of dimensions {a_u.shape[1]}."
         )
         raise ValueError(msg)
-    invalid_aj_lst = [aj for aj in aj_lst if aj < 0]
+    invalid_aj_lst = [aj.item() if isinstance(aj, np.generic) else aj for aj in aj_lst if aj < 0]
     if len(invalid_aj_lst) > 0:
         msg = f"input contains invalid aj values: {invalid_aj_lst}"
         raise ValueError(msg)
@@ -561,7 +561,7 @@ def high_dim_3_comparison(a_u: np.ndarray) -> Tuple[float, float]:
 
     actual = np.mean(a_actual)
     _lambda = np.sqrt(a_dimensions / (1 + a_dimensions))
-    expected = np.product(1 / _lambda)
+    expected = np.prod(1 / _lambda)
 
     return actual, expected
 
