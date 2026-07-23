@@ -1,0 +1,75 @@
+# Local workspace
+/.local/
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Python build and distribution output
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+pip-wheel-metadata/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Test, coverage, and static-analysis caches
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+.mypy_cache/
+.pyright/
+.pyre/
+.pytype/
+.ruff_cache/
+.hypothesis/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Generated documentation
+/docs/_build/
+/documentation-page/dist/
+
+# Local environment files and logs
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+*.log
+
+# Editors and IDEs
+.vscode/
+.idea/
+.fleet/
+*.code-workspace
+*.iml
+*.ipr
+*.iws
+
+# Operating-system files
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+Desktop.ini
+
+# Temporary and backup files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
