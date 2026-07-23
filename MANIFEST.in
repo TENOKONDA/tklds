@@ -1,4 +1,11 @@
+include LICENSE
+include README.md
+include CITATION.cff
+include CITATION.bib
+include CITATION.md
+include .zenodo.json
+include codemeta.json
 include tklds/direction_numbers/new-joe-kuo-6.21201
 include tklds/direction_numbers/tkrgsobol_a_ap5_50000
-include tklds/direction_numbers/new-joe-kuo-6.21201.pickle
-include tklds/direction_numbers/tkrgsobol_a_ap5_50000.pickle
+include tklds/direction_numbers/*.pickle
+include tklds/direction_numbers/README.md

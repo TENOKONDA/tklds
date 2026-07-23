@@ -1,0 +1,23 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "name": "tklds",
+  "alternateName": "Tenokonda Low Discrepancy Sequences",
+  "description": "High-dimensional Sobol' sequences and direction numbers for quasi-Monte Carlo simulation.",
+  "version": "0.2.0",
+  "license": "https://spdx.org/licenses/BSD-3-Clause",
+  "codeRepository": "https://github.com/TENOKONDA/tklds",
+  "issueTracker": "https://github.com/TENOKONDA/tklds/issues",
+  "downloadUrl": "https://pypi.org/project/tklds/",
+  "programmingLanguage": "Python",
+  "runtimePlatform": "Python >=3.10",
+  "applicationCategory": ["Scientific computing", "Quasi-Monte Carlo simulation", "Numerical integration"],
+  "keywords": ["Sobol sequence", "quasi-Monte Carlo", "low-discrepancy sequence", "direction numbers"],
+  "author": [
+    { "@type": "Person", "givenName": "Andres", "familyName": "Oliva Denis", "email": "andres@tenokonda.com", "affiliation": { "@type": "Organization", "name": "Tenokonda UK" } },
+    { "@type": "Person", "givenName": "James", "familyName": "Wheeldon", "email": "james@tenokonda.com", "affiliation": { "@type": "Organization", "name": "Tenokonda UK" } },
+    { "@type": "Person", "givenName": "Ilya", "familyName": "Manyakin", "email": "ilya@tenokonda.com", "affiliation": { "@type": "Organization", "name": "Tenokonda UK" } },
+    { "@type": "Person", "givenName": "Adrien", "familyName": "Papaioannou", "email": "adrien@tenokonda.com", "affiliation": { "@type": "Organization", "name": "Tenokonda UK" } }
+  ],
+  "citation": "https://ssrn.com/abstract=7040539"
+}
