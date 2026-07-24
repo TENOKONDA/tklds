@@ -1,0 +1,26 @@
+{
+  "title": "tklds: High-Dimensional Sobol' Sequences for Python",
+  "upload_type": "software",
+  "version": "0.2.0",
+  "description": "Python package and direction-number dataset for high-dimensional Sobol' sequences and quasi-Monte Carlo simulation, including the 50,000-dimensional tkrg-a-ap5 construction.",
+  "creators": [
+    { "name": "Oliva Denis, Andres", "affiliation": "Tenokonda UK" },
+    { "name": "Wheeldon, James", "affiliation": "Tenokonda UK" },
+    { "name": "Manyakin, Ilya", "affiliation": "Tenokonda UK" },
+    { "name": "Papaioannou, Adrien", "affiliation": "Tenokonda UK" }
+  ],
+  "access_right": "open",
+  "license": "BSD-3-Clause",
+  "keywords": [
+    "Sobol sequences",
+    "quasi-Monte Carlo",
+    "low-discrepancy sequences",
+    "direction numbers",
+    "numerical integration",
+    "scientific computing"
+  ],
+  "related_identifiers": [
+    { "identifier": "https://ssrn.com/abstract=7040539", "relation": "isSupplementTo", "scheme": "url" },
+    { "identifier": "https://pypi.org/project/tklds/", "relation": "isIdenticalTo", "scheme": "url" }
+  ]
+}
