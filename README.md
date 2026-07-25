@@ -1,5 +1,6 @@
 # tklds — High-Dimensional Sobol’ Sequences for Python
 
+[![CI](https://github.com/TENOKONDA/tklds/actions/workflows/workflow.yml/badge.svg?branch=main)](https://github.com/TENOKONDA/tklds/actions/workflows/workflow.yml)
 [![PyPI](https://img.shields.io/pypi/v/tklds.svg)](https://pypi.org/project/tklds/)
 [![Python](https://img.shields.io/pypi/pyversions/tklds.svg)](https://pypi.org/project/tklds/)
 [![License](https://img.shields.io/badge/license-BSD--3--Clause-blue.svg)](https://github.com/TENOKONDA/tklds/blob/main/LICENSE)
@@ -43,7 +44,7 @@ cd tklds
 python -m pip install -e ".[examples,test]"
 ```
 
-`tklds` requires Python 3.10 or later. The `examples` extra installs the packages used by the notebooks; the `test` extra installs the proposed test runner and coverage tooling.
+`tklds` requires Python 3.10 or later. The `examples` extra installs the packages used by the notebooks; the `test` extra installs the test and coverage tooling.
 
 ## Quick start
 
@@ -142,17 +143,17 @@ The paper introduces `tkrg-a-ap5`, explains its construction over GF(2), develop
 - [Machine-readable citation](https://github.com/TENOKONDA/tklds/blob/main/CITATION.cff)
 - [BibTeX entries](https://github.com/TENOKONDA/tklds/blob/main/CITATION.bib)
 
-## Testing
+## Testing and release checks
 
 The repository contains unit tests for the public generator interfaces, iterative generation, the SciPy-compatible Sobol engine, numerical integration utilities, stochastic-process components, and the spurious-variance diagnostic.
 
-Run the current suite from a source checkout with:
+Run the suite from a source checkout with:
 
 ```bash
 python -m unittest discover -s tklds/tests -p "test_*.py"
 ```
 
-Automated pull-request and release-gating workflows are a high-priority follow-on item. Until those workflows are added, maintainers should run the complete suite manually before tagging a release.
+The GitHub Actions workflow runs on pull requests targeting `main`, pushes to `main`, and semantic-version tags. It runs the unit tests, builds the source and wheel distributions, and validates package metadata with Twine. Publication to PyPI is restricted to version-tag pushes and occurs only after the preceding test, build, and inspection jobs pass.
 
 ## Project links
 
